@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Prompt Selector",
+  "version": "1.0",
+  "description": "Select prompts from a local file",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "fileSystemProvider"
+  ],
+ 
+  "content_scripts": [
+    {
+      "matches": ["https://openai.com/chat*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
